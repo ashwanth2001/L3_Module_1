@@ -36,41 +36,57 @@ public class MoreAndMoreTests {
 	  }
 
 	public static boolean isPrime(int a) {
-		boolean s = false;
-		for(int i = 0; i<a; i++) {
+		boolean s = true;
+		for(int i = 2; i<a; i++) {
 			if(a%i == 0) {
-				s = true;
+				s = false;
 			}
 		}
 		return s;
 	}
-//	@Test
-//	  public void SquareTest() {
-//
-//	    assertTrue(isSquare(4));
-//	    assertTrue(isSquare(144));
-//	    assertTrue(isSquare(64));
-//	    assertTrue(isSquare(10201));
-//	    assertTrue(isSquare(1));
-//	    assertFalse(isSquare(3));
-//	    assertFalse(isSquare(22));
-//	    assertFalse(isSquare(143));
-//
-//	  }
-//
-//	@Test
-//	  public void CubeTest() {
-//
-//	    assertTrue(isCube(27));
-//	    assertTrue(isCube(216));
-//	    assertTrue(isCube(729));
-//	    assertTrue(isCube(1));
-//	    assertFalse(isCube(3));
-//	    assertFalse(isCube(22));
-//	    assertFalse(isCube(143));
-//
-//	  }
+	@Test
+	  public void SquareTest() {
 
+	    assertTrue(isSquare(4));
+	    assertTrue(isSquare(144));
+	    assertTrue(isSquare(64));
+	    assertTrue(isSquare(10201));
+	    assertTrue(isSquare(1));
+	    assertFalse(isSquare(3));
+	    assertFalse(isSquare(22));
+	    assertFalse(isSquare(143));
 
+	  }
+	
+	public static boolean isSquare(int a) {
+		for(int i = 0; i<=a; i++) {
+			if(i*i == a) {
+				return true;
+			}
+		}
+		return false;
+	}
+
+	@Test
+	  public void CubeTest() {
+
+	    assertTrue(isCube(27));
+	    assertTrue(isCube(216));
+	    assertTrue(isCube(729));
+	    assertTrue(isCube(1));
+	    assertFalse(isCube(3));
+	    assertFalse(isCube(22));
+	    assertFalse(isCube(143));
+
+	  }
+	
+	public static boolean isCube(int a) {
+		for(int i = 0; i<=a; i++) {
+			if(i*i*i == a) {
+				return true;
+			}
+		}
+		return false;
+	}
 
 }
